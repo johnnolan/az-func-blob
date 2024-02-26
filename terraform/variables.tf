@@ -18,14 +18,20 @@ variable "client_secret" {
     description = "This is an example input variable using env variables."
 }
 
-variable "resource_group_location" {
+variable "project" {
   type        = string
-  default     = "ukwest"
-  description = "Location of the resource group."
+  default     = "azfuncblob"
+  description = "Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription."
 }
 
-variable "resource_group_name_prefix" {
+variable "environment" {
   type        = string
-  default     = "rg"
+  default     = "dev"
+  description = "Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription."
+}
+
+variable "location" {
+  type        = string
+  default     = "ukwest"
   description = "Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription."
 }
